@@ -385,7 +385,8 @@ first.parentNode.insertBefore(script, first);
 
 <style>
 /* === KIT PROTOTYPE ADDITIONS === */
-.proto-badge{position:fixed;bottom:14px;right:14px;background:#B8860B;color:#1C1C1C;font-weight:800;font-size:11px;padding:5px 12px;border-radius:14px;letter-spacing:.06em;z-index:9999}
+.proto-badge{position:fixed;bottom:12px;right:12px;background:rgba(184,134,11,.82);color:#1C1C1C;font-weight:800;font-size:10px;padding:4px 10px;border-radius:12px;letter-spacing:.06em;z-index:9999;pointer-events:none;backdrop-filter:blur(2px)}
+@media(max-width:749px){.proto-badge{font-size:8px;padding:3px 8px;opacity:.55}}
 .kit-nav-badge{background:linear-gradient(135deg,#B8860B,#FFD700);color:#1C1C1C;font-size:9px;font-weight:800;padding:1px 6px;border-radius:8px;margin-left:5px;vertical-align:2px}
 .kit-ladder-section{padding:70px 0;background:#1C1C1C}
 .kit-ladder-section .page-width{max-width:1200px;margin:0 auto;padding:0 24px}
