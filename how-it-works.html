@@ -437,7 +437,7 @@ first.parentNode.insertBefore(script, first);
 .kitcta{text-align:center;margin:44px 0 10px}
 @media(max-width:900px){.kitsteps{grid-template-columns:1fr}.kitpage-hero h1{font-size:1.9rem}}
 </style>
-<style>/* mask page content scrolling behind the floating nav gap */body::before{content:"";position:fixed;top:0;left:0;right:0;height:17px;background:#1C1C1C;z-index:999}</style>
+<style>/* mask page content scrolling behind the floating nav band */body::before{content:"";position:fixed;top:0;left:0;right:0;height:var(--navmask,93px);background:#1C1C1C;z-index:999;pointer-events:none}</style>
 </head>
 
 <body class="template-page">
@@ -768,6 +768,7 @@ first.parentNode.insertBefore(script, first);
     });
   </script>
 <script src="https://cdn.shopify.com/storefront/standard-actions.js" type="module" data-source-attribution="shopify.standard_actions"></script>
-<div class="proto-badge">DESIGN PROTOTYPE</div></body>
+<div class="proto-badge">DESIGN PROTOTYPE</div><script>(function(){function m(){var h=document.getElementById('site-header');if(h){document.documentElement.style.setProperty('--navmask',Math.ceil(h.getBoundingClientRect().bottom+1)+'px');}}window.addEventListener('resize',m);window.addEventListener('load',m);document.addEventListener('DOMContentLoaded',m);m();})();</script>
+</body>
 </html>
 
