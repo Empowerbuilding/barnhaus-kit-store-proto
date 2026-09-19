@@ -3073,7 +3073,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const carouselTrack = document.getElementById('carousel-track');
   
   // Fetch products from Shopify collection
-  fetch('/collections/floor-plans/products.json?limit=20')
+  Promise.reject('static prototype: cards pre-rendered')
     .then(response => response.json())
     .then(data => {
       if (data.products && data.products.length > 0) {
@@ -3166,7 +3166,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .catch(error => {
       console.error('Error loading products:', error);
-      carouselTrack.innerHTML = '<p style="color: #D1D5DB; text-align: center; width: 100%;">Unable to load products</p>';
+      /* static prototype: keep pre-rendered cards */
     });
 });
 
