@@ -421,6 +421,7 @@ first.parentNode.insertBefore(script, first);
 @media(max-width:900px){.kit-ladder,.kit-guarantee .in{grid-template-columns:1fr}}
 </style>
 <style>/* mask page content scrolling behind the floating nav band */body::before{content:"";position:fixed;top:0;left:0;right:0;height:calc(var(--navmask,93px) + 30px);background:linear-gradient(to bottom,#1C1C1C calc(100% - 30px),rgba(28,28,28,0) 100%);z-index:999;pointer-events:none}</style>
+<style>.product-page{position:relative}.mobile-back-button{position:absolute !important;top:12px;left:12px;z-index:5}</style>
 </head>
 
 <body class="template-product">
@@ -486,7 +487,7 @@ first.parentNode.insertBefore(script, first);
 
 <section class="product-page">
   <!-- Mobile Back Button -->
-  <button class="mobile-back-button" onclick="window.location.href='/pages/plans'" aria-label="Go back">
+  <button class="mobile-back-button" onclick="window.location.href='catalog.html'" aria-label="Go back">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
       <line x1="19" y1="12" x2="5" y2="12"></line>
       <polyline points="12 19 5 12 12 5"></polyline>
