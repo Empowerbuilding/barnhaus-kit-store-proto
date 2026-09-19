@@ -449,7 +449,7 @@ first.parentNode.insertBefore(script, first);
         <ul class="nav-list">
           <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="catalog.html" class="nav-link">Catalog</a>
-<a href="steel-kits.html" class="nav-link" style="color:#FFD700;">Steel Kits<span class="kit-nav-badge">NEW</span></a></li>
+<a href="steel-kits.html" class="nav-link" style="color:#FFD700;">Steel Kits</a></li>
           <li class="nav-item"><a href="https://store.barnhaussteelbuilders.com/pages/vote-on-concepts" class="nav-link">Concepts</a></li>
           <li class="nav-item"><a href="https://store.barnhaussteelbuilders.com/pages/faq" class="nav-link">FAQ</a></li>
           <li class="nav-item"><a href="https://store.barnhaussteelbuilders.com/pages/contact" class="nav-link">Contact</a></li>
@@ -471,7 +471,7 @@ first.parentNode.insertBefore(script, first);
       <ul class="mobile-nav-list">
         <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">Home</a></li>
         <li class="mobile-nav-item"><a href="catalog.html" class="mobile-nav-link">Catalog</a></li>
-        <li class="mobile-nav-item"><a href="steel-kits.html" class="mobile-nav-link" style="color:#FFD700">Steel Kits <span class="kit-nav-badge">NEW</span></a></li>
+        <li class="mobile-nav-item"><a href="steel-kits.html" class="mobile-nav-link" style="color:#FFD700">Steel Kits </a></li>
         <li class="mobile-nav-item"><a href="https://store.barnhaussteelbuilders.com/pages/vote-on-concepts" class="mobile-nav-link">Concepts</a></li>
         <li class="mobile-nav-item"><a href="https://store.barnhaussteelbuilders.com/pages/faq" class="mobile-nav-link">FAQ</a></li>
         <li class="mobile-nav-item"><a href="https://store.barnhaussteelbuilders.com/pages/contact" class="mobile-nav-link">Contact</a></li>
@@ -1019,7 +1019,7 @@ first.parentNode.insertBefore(script, first);
             onmouseover="this.style.opacity='0.9'"
             onmouseout="this.style.opacity='1'"
           >
-            💰 Estimate My Build Cost
+            💰 Calculate My Kit Cost
           </button>
         </div>
 
@@ -1232,114 +1232,71 @@ first.parentNode.insertBefore(script, first);
         <div id="calc-modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:9999; overflow-y:auto; padding:20px 10px;">
           <div style="max-width:780px; margin:0 auto; background:#1C1C1C; border-radius:12px; border:1px solid #333; padding:28px 24px; position:relative;"><button onclick="closeCalcModal()" style="position:absolute;top:14px;right:16px;background:none;border:none;color:#aaa;font-size:22px;cursor:pointer;line-height:1;">&times;</button>
 
-            <h2 style="color:#fff;font-size:1.5rem;font-weight:700;margin:0 0 4px;">Estimate My Build Cost</h2>
+            <h2 style="color:#fff;font-size:1.5rem;font-weight:700;margin:0 0 4px;">Steel Kit Cost Calculator</h2>
             <p id="calc-plan-name" style="color:#B8860B;font-size:0.9rem;margin:0 0 24px;"></p><div id="calc-step-inputs">
               <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:18px;">
                 <div>
                   <label style="color:#ccc;font-size:13px;font-weight:600;display:block;margin-bottom:6px;">Living SF</label>
-                  <input id="calc-living" type="number" min="0" step="50"
-                    style="width:100%;background:#252525;border:1px solid #444;border-radius:6px;padding:10px 12px;color:#fff;font-size:14px;box-sizing:border-box;"
-                    oninput="calcUpdate()" onfocus="this.select()">
+                  <input id="calc-living" type="number" min="0" step="50" style="width:100%;background:#252525;border:1px solid #444;border-radius:6px;padding:10px 12px;color:#fff;font-size:14px;box-sizing:border-box;" oninput="calcUpdate()" onfocus="this.select()">
                 </div>
                 <div>
-                  <label style="color:#ccc;font-size:13px;font-weight:600;display:block;margin-bottom:6px;">Patio SF</label>
-                  <input id="calc-patio" type="number" min="0" step="50"
-                    style="width:100%;background:#252525;border:1px solid #444;border-radius:6px;padding:10px 12px;color:#fff;font-size:14px;box-sizing:border-box;"
-                    oninput="calcUpdate()" onfocus="this.select()">
+                  <label style="color:#ccc;font-size:13px;font-weight:600;display:block;margin-bottom:6px;">Porch/Patio SF</label>
+                  <input id="calc-patio" type="number" min="0" step="50" style="width:100%;background:#252525;border:1px solid #444;border-radius:6px;padding:10px 12px;color:#fff;font-size:14px;box-sizing:border-box;" oninput="calcUpdate()" onfocus="this.select()">
                 </div>
                 <div>
                   <label id="calc-garage-label" style="color:#ccc;font-size:13px;font-weight:600;display:block;margin-bottom:6px;">Garage SF</label>
-                  <input id="calc-garage" type="number" min="0" step="50"
-                    style="width:100%;background:#252525;border:1px solid #444;border-radius:6px;padding:10px 12px;color:#fff;font-size:14px;box-sizing:border-box;"
-                    oninput="calcUpdate()" onfocus="this.select()">
+                  <input id="calc-garage" type="number" min="0" step="50" style="width:100%;background:#252525;border:1px solid #444;border-radius:6px;padding:10px 12px;color:#fff;font-size:14px;box-sizing:border-box;" oninput="calcUpdate()" onfocus="this.select()">
                 </div>
               </div>
 
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px;">
-                <div>
-                  <label style="color:#ccc;font-size:13px;font-weight:600;display:block;margin-bottom:6px;">Bedrooms</label>
-                  <input id="calc-beds" type="number" min="1" max="10"
-                    style="width:100%;background:#252525;border:1px solid #444;border-radius:6px;padding:10px 12px;color:#fff;font-size:14px;box-sizing:border-box;"
-                    oninput="calcUpdate()" onfocus="this.select()">
+              <div id="calc-kit-preview" style="background:linear-gradient(135deg,#B8860B22,#DAA52022);border:1px solid #B8860B44;border-radius:8px;padding:14px 16px;margin-bottom:20px;">
+                <div style="color:#aaa;font-size:12px;margin-bottom:2px;">Steel Kit Package (frame + trusses)</div>
+                <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;">
+                  <span id="calc-preview-kit" style="color:#FFD700;font-size:1.6rem;font-weight:800;"></span>
+                  <span id="calc-preview-lbs" style="color:#999;font-size:12px;"></span>
                 </div>
-                <div>
-                  <label style="color:#ccc;font-size:13px;font-weight:600;display:block;margin-bottom:6px;">Bathrooms</label>
-                  <input id="calc-baths" type="number" min="1" max="10" step="0.5"
-                    style="width:100%;background:#252525;border:1px solid #444;border-radius:6px;padding:10px 12px;color:#fff;font-size:14px;box-sizing:border-box;"
-                    oninput="calcUpdate()" onfocus="this.select()">
-                </div>
-              </div><div style="margin-bottom:18px;">
-                <label style="color:#ccc;font-size:13px;font-weight:600;display:block;margin-bottom:8px;">Finish Level</label>
-                <div style="display:flex;gap:8px;">
-                  <button onclick="calcSetTier('economy')" id="calc-tier-economy"
-                    style="flex:1;padding:10px;border-radius:6px;border:2px solid #444;background:#252525;color:#ccc;font-size:13px;font-weight:600;cursor:pointer;text-transform:capitalize;transition:all 0.15s;">
-                    Economy
-                  </button>
-                  <button onclick="calcSetTier('standard')" id="calc-tier-standard"
-                    style="flex:1;padding:10px;border-radius:6px;border:2px solid #444;background:#B8860B;border-color:#B8860B;color:#fff;font-size:13px;font-weight:600;cursor:pointer;text-transform:capitalize;transition:all 0.15s;">
-                    Standard
-                  </button>
-                  <button onclick="calcSetTier('luxury')" id="calc-tier-luxury"
-                    style="flex:1;padding:10px;border-radius:6px;border:2px solid #444;background:#252525;color:#ccc;font-size:13px;font-weight:600;cursor:pointer;text-transform:capitalize;transition:all 0.15s;">
-                    Luxury
-                  </button>
-                </div>
-              </div><div style="margin-bottom:18px;">
-                <label style="color:#ccc;font-size:13px;font-weight:600;display:block;margin-bottom:6px;">Foundation</label>
-                <select id="calc-foundation" onchange="calcUpdate()"
-                  style="width:100%;background:#252525;border:1px solid #444;border-radius:6px;padding:10px 12px;color:#fff;font-size:14px;">
-                  <option value="slab">Concrete Slab</option>
-                  <option value="crawl">Crawl Space (+8%)</option>
-                  <option value="basement">Full Basement (+20%)</option>
-                </select>
-              </div><div style="margin-bottom:24px;">
-                <label style="color:#ccc;font-size:13px;font-weight:600;display:block;margin-bottom:6px;">Nearest City</label>
-                <select id="calc-location" onchange="calcUpdate()"
-                  style="width:100%;background:#252525;border:1px solid #444;border-radius:6px;padding:10px 12px;color:#fff;font-size:14px;">
-                </select>
-              </div><div id="calc-preview-owner" style="display:none;"></div>
-              <div id="calc-preview-gc" style="display:none;"></div>
-              <div id="calc-preview-savings" style="display:none;"></div><div style="margin-bottom:18px;">
-                <label style="color:#ccc;font-size:13px;font-weight:600;display:block;margin-bottom:6px;">
-                  Sustainability Score: <span id="calc-sustain-val" style="color:#B8860B;">5</span>/10
-                  <span id="sustain-info-btn" onclick="document.getElementById('sustain-tooltip').style.display=document.getElementById('sustain-tooltip').style.display==='none'?'block':'none'"
-                    style="display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;border:1px solid #666;color:#999;font-size:11px;font-weight:700;cursor:pointer;margin-left:6px;vertical-align:middle;">i</span>
-                </label>
-                <div id="sustain-tooltip" style="display:none;background:#1a1a1a;border:1px solid #444;border-radius:6px;padding:10px 12px;margin-bottom:8px;color:#aaa;font-size:12px;line-height:1.5;">
-                  Reflects how green and energy-efficient your build is. Higher scores add features like solar prep, spray foam insulation, high-efficiency HVAC, rainwater harvesting, and energy-star appliances. Each point above 5 adds ~2% to your build cost.
-                </div>
-                <input id="calc-sustain" type="range" min="1" max="10" value="5"
-                  oninput="document.getElementById('calc-sustain-val').textContent=this.value; calcUpdate();"
-                  style="width:100%;accent-color:#B8860B;cursor:pointer;">
-                <div style="display:flex;justify-content:space-between;color:#666;font-size:11px;margin-top:4px;">
-                  <span>Basic (1)</span><span>Maximum (10)</span>
-                </div>
-                <p style="color:#666;font-size:11px;margin-top:4px;">+2% cost per point above 5. Solar prep, advanced insulation, energy-efficient systems.</p>
-              </div><div style="margin-bottom:24px;">
-                <label style="color:#ccc;font-size:13px;font-weight:600;display:block;margin-bottom:8px;">Property Grade (Slope)</label>
+                <div style="color:#888;font-size:11.5px;margin-top:4px;">Engineered takeoff formula — the same system we quote fabrication with. Freight &amp; site factors below refine your delivered estimate.</div>
+              </div>
+
+              <div style="margin-bottom:18px;">
+                <label style="color:#ccc;font-size:13px;font-weight:600;display:block;margin-bottom:6px;">Delivery Location (nearest city)</label>
+                <select id="calc-location" onchange="calcUpdate()" style="width:100%;background:#252525;border:1px solid #444;border-radius:6px;padding:10px 12px;color:#fff;font-size:14px;"></select>
+              </div>
+
+              <div style="margin-bottom:18px;">
+                <label style="color:#ccc;font-size:13px;font-weight:600;display:block;margin-bottom:8px;">Land Slope</label>
                 <div style="display:flex;flex-direction:column;gap:8px;">
                   <label style="display:flex;align-items:center;gap:10px;cursor:pointer;background:#252525;padding:10px 12px;border-radius:6px;border:1px solid #444;">
-                    <input type="radio" name="calc-grade" value="1.0" checked style="accent-color:#B8860B;" onchange="calcUpdate()">
-                    <span style="color:#ccc;font-size:13px;"><strong style="color:#fff;">Flat</strong> — Level lot, no grading needed</span>
+                    <input type="radio" name="calc-grade" value="flat" checked style="accent-color:#B8860B;" onchange="calcUpdate()">
+                    <span style="color:#ccc;font-size:13px;"><strong style="color:#fff;">Flat</strong> — level pad, standard slab &amp; anchorage</span>
                   </label>
                   <label style="display:flex;align-items:center;gap:10px;cursor:pointer;background:#252525;padding:10px 12px;border-radius:6px;border:1px solid #444;">
-                    <input type="radio" name="calc-grade" value="1.05" style="accent-color:#B8860B;" onchange="calcUpdate()">
-                    <span style="color:#ccc;font-size:13px;"><strong style="color:#fff;">Slight Grade</strong> — Minor slope, minimal grading (+5%)</span>
+                    <input type="radio" name="calc-grade" value="slight" style="accent-color:#B8860B;" onchange="calcUpdate()">
+                    <span style="color:#ccc;font-size:13px;"><strong style="color:#fff;">Slight Grade</strong> — minor grading &amp; extra fill (+15% foundation)</span>
                   </label>
                   <label style="display:flex;align-items:center;gap:10px;cursor:pointer;background:#252525;padding:10px 12px;border-radius:6px;border:1px solid #444;">
-                    <input type="radio" name="calc-grade" value="1.12" style="accent-color:#B8860B;" onchange="calcUpdate()">
-                    <span style="color:#ccc;font-size:13px;"><strong style="color:#fff;">Moderate Grade</strong> — Noticeable slope, retaining walls likely (+12%)</span>
+                    <input type="radio" name="calc-grade" value="moderate" style="accent-color:#B8860B;" onchange="calcUpdate()">
+                    <span style="color:#ccc;font-size:13px;"><strong style="color:#fff;">Moderate Grade</strong> — stem walls / stepped foundation likely (+35%)</span>
                   </label>
                   <label style="display:flex;align-items:center;gap:10px;cursor:pointer;background:#252525;padding:10px 12px;border-radius:6px;border:1px solid #444;">
-                    <input type="radio" name="calc-grade" value="1.22" style="accent-color:#B8860B;" onchange="calcUpdate()">
-                    <span style="color:#ccc;font-size:13px;"><strong style="color:#fff;">Steep Grade</strong> — Heavy grading, significant site work (+22%)</span>
+                    <input type="radio" name="calc-grade" value="steep" style="accent-color:#B8860B;" onchange="calcUpdate()">
+                    <span style="color:#ccc;font-size:13px;"><strong style="color:#fff;">Steep Grade</strong> — engineered stem walls or piers (+65%)</span>
                   </label>
                 </div>
+              </div>
+
+              <div style="margin-bottom:24px;">
+                <label style="color:#ccc;font-size:13px;font-weight:600;display:block;margin-bottom:6px;">Foundation Type</label>
+                <select id="calc-foundation" onchange="calcUpdate()" style="width:100%;background:#252525;border:1px solid #444;border-radius:6px;padding:10px 12px;color:#fff;font-size:14px;">
+                  <option value="slab">Concrete Slab</option>
+                  <option value="pier">Pier &amp; Beam (+10%)</option>
+                  <option value="basement">Full Basement (+100%)</option>
+                </select>
               </div>
 
               <button onclick="calcNextStep()"
                 style="width:100%;padding:14px;background:linear-gradient(135deg,#B8860B,#DAA520);border:none;border-radius:6px;color:#fff;font-size:15px;font-weight:700;cursor:pointer;">
-                Get My Full Estimate →
+                Get My Kit Quote →
               </button>
             </div><div id="calc-step-form" style="display:none;">
               <div style="background:#B8860B1a;border:1px solid #B8860B55;border-radius:8px;padding:14px;margin-bottom:20px;">
@@ -1406,28 +1363,33 @@ first.parentNode.insertBefore(script, first);
               </div>
             </div><div id="calc-step-results" style="display:none;">
               <div style="background:#14532d33;border:1px solid #22c55e55;border-radius:8px;padding:14px;margin-bottom:20px;">
-                <p id="calc-results-thanks" style="color:#4ade80;font-size:13px;font-weight:600;margin:0;">✅ Your estimate is ready!</p>
+                <p id="calc-results-thanks" style="color:#4ade80;font-size:13px;font-weight:600;margin:0;">✅ Your kit quote is ready!</p>
               </div>
 
               <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:20px;">
                 <div style="background:linear-gradient(135deg,#B8860B22,#DAA52022);border:1px solid #B8860B44;border-radius:8px;padding:16px;">
-                  <div style="color:#aaa;font-size:12px;margin-bottom:4px;">Owner-Builder Cost</div>
-                  <div id="res-owner" style="color:#DAA520;font-size:1.8rem;font-weight:700;"></div>
-                  <div style="color:#999;font-size:12px;margin-top:4px;">With our Blueprint & Roadmap system</div>
+                  <div style="color:#aaa;font-size:12px;margin-bottom:4px;">Steel Kit Package — frame + trusses, engineered &amp; fabricated</div>
+                  <div id="res-kit" style="color:#DAA520;font-size:1.8rem;font-weight:700;"></div>
+                  <div id="res-kit-sub" style="color:#999;font-size:12px;margin-top:4px;"></div>
                 </div>
                 <div style="background:#25252588;border:1px solid #333;border-radius:8px;padding:16px;">
-                  <div style="color:#aaa;font-size:12px;margin-bottom:4px;">General Contractor Cost</div>
-                  <div id="res-gc" style="color:#fff;font-size:1.4rem;font-weight:600;"></div>
-                  <div style="color:#999;font-size:12px;margin-top:4px;">Includes 18% contractor markup</div>
+                  <div style="color:#aaa;font-size:12px;margin-bottom:4px;">Estimated Freight</div>
+                  <div id="res-freight" style="color:#fff;font-size:1.4rem;font-weight:600;"></div>
+                  <div id="res-freight-sub" style="color:#999;font-size:12px;margin-top:4px;"></div>
+                </div>
+                <div style="background:#25252588;border:1px solid #333;border-radius:8px;padding:16px;">
+                  <div style="color:#aaa;font-size:12px;margin-bottom:4px;">Foundation &amp; Site Allowance <span style="color:#666;">(local contract — not part of kit)</span></div>
+                  <div id="res-site" style="color:#fff;font-size:1.4rem;font-weight:600;"></div>
+                  <div id="res-site-sub" style="color:#999;font-size:12px;margin-top:4px;"></div>
                 </div>
                 <div style="background:#14532d22;border:1px solid #22c55e44;border-radius:8px;padding:16px;">
-                  <div style="color:#aaa;font-size:12px;margin-bottom:4px;">Your Potential Savings</div>
-                  <div id="res-savings" style="color:#4ade80;font-size:1.4rem;font-weight:600;"></div>
-                  <div id="res-savings-pct" style="color:#86efac;font-size:12px;margin-top:4px;"></div>
+                  <div style="color:#aaa;font-size:12px;margin-bottom:4px;">Estimated Total — kit delivered + foundation</div>
+                  <div id="res-total" style="color:#4ade80;font-size:1.5rem;font-weight:700;"></div>
                 </div>
               </div><div style="border-top:1px solid #333;padding-top:16px;margin-bottom:20px;">
-                <h4 style="color:#fff;font-size:14px;font-weight:600;margin:0 0 12px;">Project Breakdown</h4>
+                <h4 style="color:#fff;font-size:14px;font-weight:600;margin:0 0 12px;">Quote Breakdown</h4>
                 <div id="res-breakdown" style="display:flex;flex-direction:column;gap:8px;font-size:13px;"></div>
+                <p style="color:#666;font-size:11.5px;line-height:1.5;margin:12px 0 0;">Kit pricing is generated by our engineering takeoff system from this plan's actual framing geometry. Final quote is confirmed after engineering review and site verification. Kit excludes foundation, erection labor, and finishes. 100% of your plan purchase credits toward your kit.</p>
               </div>
 
               <a href="https://crm.empowerbuilding.ai/book/30-minute-consultation?source=shopify_store"
@@ -1444,60 +1406,70 @@ first.parentNode.insertBefore(script, first);
 
         <script src="//store.barnhaussteelbuilders.com/cdn/shop/t/4/assets/floor-plans-data.js?v=7918023744561082161785459312"></script>
         <script>
-        // ── Data ──────────────────────────────────────────────────────────────
+        // ── Kit formula (mirror of Blueprint kit_package/bom.py) ─────────────
+        var KIT_RATE_PER_LB = 2.09;        // $/lb retail benchmark (ASF Allen quote)
+        var LBS_ENCLOSED_SF = 8.0;         // calibrated: Titan 71,406 lbs / 8,898 SF (Allen ~7.9)
+        var LBS_PORCH_SF = 4.0;            // porch/patio = roof framing only
+        var KIT_WEIGHTS = {                // plans with real Blueprint kit_package runs
+          "the-titan-luxury-modern-barndominium-plan": 71406
+        };
+        var LBS_PER_LOAD = 44000;          // flatbed capacity
+        var FREIGHT_PER_MILE = 3.85;       // $/mile per load
+        var FREIGHT_MIN_LOAD = 750;
+        var FND_BASE_SF = 8;               // slab allowance $/SF enclosed
+        var FND_PORCH_SF = 5;
+        var GRADE_FACTORS = {flat:1.0, slight:1.15, moderate:1.35, steep:1.65};
+        var GRADE_LABELS  = {flat:"Flat", slight:"Slight Grade", moderate:"Moderate Grade", steep:"Steep Grade"};
+        var FND_FACTORS   = {slab:1.0, pier:1.10, basement:2.0};
+        var FND_LABELS    = {slab:"Concrete Slab", pier:"Pier & Beam", basement:"Full Basement"};
+
+        // Road miles from our Central Texas fabrication partner
         var CALC_CITIES = [
-          {id:"san-antonio",name:"San Antonio, TX",m:1.0},
-          {id:"houston",name:"Houston, TX",m:1.15},
-          {id:"dallas",name:"Dallas, TX",m:1.12},
-          {id:"austin",name:"Austin, TX",m:1.18},
-          {id:"oklahoma-city",name:"Oklahoma City, OK",m:0.95},
-          {id:"tulsa",name:"Tulsa, OK",m:0.92},
-          {id:"little-rock",name:"Little Rock, AR",m:0.90},
-          {id:"new-york",name:"New York City, NY",m:2.4},
-          {id:"boston",name:"Boston, MA",m:2.1},
-          {id:"philadelphia",name:"Philadelphia, PA",m:1.8},
-          {id:"pittsburgh",name:"Pittsburgh, PA",m:1.4},
-          {id:"miami",name:"Miami, FL",m:1.5},
-          {id:"atlanta",name:"Atlanta, GA",m:1.25},
-          {id:"nashville",name:"Nashville, TN",m:1.2},
-          {id:"charlotte",name:"Charlotte, NC",m:1.18},
-          {id:"orlando",name:"Orlando, FL",m:1.3},
-          {id:"tampa",name:"Tampa, FL",m:1.28},
-          {id:"los-angeles",name:"Los Angeles, CA",m:2.2},
-          {id:"san-francisco",name:"San Francisco, CA",m:2.5},
-          {id:"san-diego",name:"San Diego, CA",m:2.0},
-          {id:"seattle",name:"Seattle, WA",m:2.0},
-          {id:"portland",name:"Portland, OR",m:1.8},
-          {id:"boise",name:"Boise, ID",m:1.3},
-          {id:"chicago",name:"Chicago, IL",m:1.7},
-          {id:"minneapolis",name:"Minneapolis, MN",m:1.5},
-          {id:"detroit",name:"Detroit, MI",m:1.2},
-          {id:"indianapolis",name:"Indianapolis, IN",m:1.1},
-          {id:"columbus",name:"Columbus, OH",m:1.12},
-          {id:"kansas-city",name:"Kansas City, MO",m:1.05},
-          {id:"phoenix",name:"Phoenix, AZ",m:1.3},
-          {id:"las-vegas",name:"Las Vegas, NV",m:1.35},
-          {id:"albuquerque",name:"Albuquerque, NM",m:1.1},
-          {id:"el-paso",name:"El Paso, TX",m:0.95},
-          {id:"denver",name:"Denver, CO",m:1.6},
-          {id:"salt-lake-city",name:"Salt Lake City, UT",m:1.4},
-          {id:"reno",name:"Reno, NV",m:1.45}
+          {id:"san-antonio",name:"San Antonio, TX",mi:30},
+          {id:"austin",name:"Austin, TX",mi:80},
+          {id:"houston",name:"Houston, TX",mi:200},
+          {id:"dallas",name:"Dallas, TX",mi:275},
+          {id:"el-paso",name:"El Paso, TX",mi:550},
+          {id:"oklahoma-city",name:"Oklahoma City, OK",mi:470},
+          {id:"tulsa",name:"Tulsa, OK",mi:550},
+          {id:"little-rock",name:"Little Rock, AR",mi:575},
+          {id:"albuquerque",name:"Albuquerque, NM",mi:720},
+          {id:"kansas-city",name:"Kansas City, MO",mi:800},
+          {id:"nashville",name:"Nashville, TN",mi:900},
+          {id:"denver",name:"Denver, CO",mi:930},
+          {id:"phoenix",name:"Phoenix, AZ",mi:985},
+          {id:"atlanta",name:"Atlanta, GA",mi:990},
+          {id:"indianapolis",name:"Indianapolis, IN",mi:1080},
+          {id:"orlando",name:"Orlando, FL",mi:1140},
+          {id:"tampa",name:"Tampa, FL",mi:1160},
+          {id:"minneapolis",name:"Minneapolis, MN",mi:1180},
+          {id:"chicago",name:"Chicago, IL",mi:1200},
+          {id:"charlotte",name:"Charlotte, NC",mi:1210},
+          {id:"columbus",name:"Columbus, OH",mi:1250},
+          {id:"las-vegas",name:"Las Vegas, NV",mi:1260},
+          {id:"san-diego",name:"San Diego, CA",mi:1280},
+          {id:"los-angeles",name:"Los Angeles, CA",mi:1350},
+          {id:"miami",name:"Miami, FL",mi:1370},
+          {id:"detroit",name:"Detroit, MI",mi:1400},
+          {id:"salt-lake-city",name:"Salt Lake City, UT",mi:1420},
+          {id:"pittsburgh",name:"Pittsburgh, PA",mi:1440},
+          {id:"boise",name:"Boise, ID",mi:1590},
+          {id:"reno",name:"Reno, NV",mi:1660},
+          {id:"san-francisco",name:"San Francisco, CA",mi:1730},
+          {id:"philadelphia",name:"Philadelphia, PA",mi:1740},
+          {id:"new-york",name:"New York City, NY",mi:1810},
+          {id:"portland",name:"Portland, OR",mi:2050},
+          {id:"boston",name:"Boston, MA",mi:2000},
+          {id:"seattle",name:"Seattle, WA",mi:2130}
         ];
 
-        var CALC_FACTORS = {
-          economy:  {bedroom:8000,  bathroom:6000,  garage:45, living:85,  patio:25},
-          standard: {bedroom:12000, bathroom:9000,  garage:60, living:110, patio:35},
-          luxury:   {bedroom:18000, bathroom:15000, garage:85, living:150, patio:50}
-        };
-        var CALC_FOUNDATION = {slab:1.0, crawl:1.08, basement:1.2};
-        var CALC_MARKUP = 0.18;
-
-        var calcTier = 'standard';
+        var CALC_HANDLE = "the-bastion";
+        var CALC_TITLE  = "The Bastion | Modern Ranch Plan";
         var calcPlanData = null;
+        var calcDefaultSF = 0;
 
         // ── Init ──────────────────────────────────────────────────────────────
         (function(){
-          // Populate city dropdown
           var sel = document.getElementById('calc-location');
           CALC_CITIES.forEach(function(c){
             var o = document.createElement('option');
@@ -1505,32 +1477,25 @@ first.parentNode.insertBefore(script, first);
             sel.appendChild(o);
           });
 
-          // Inject plan data from FloorPlansData
-          var handle = "the-bastion";
-          var planTitle = "The Bastion | Modern Ranch Plan";
-          document.getElementById('calc-plan-name').textContent = planTitle;
+          document.getElementById('calc-plan-name').textContent = CALC_TITLE;
 
           if(window.FloorPlansData){
-            calcPlanData = window.FloorPlansData.get(handle);
+            calcPlanData = window.FloorPlansData.get(CALC_HANDLE);
           }
           if(calcPlanData){
-            document.getElementById('calc-living').value  = calcPlanData.area   || 0;
-            document.getElementById('calc-patio').value   = calcPlanData.patio  || 0;
-            document.getElementById('calc-garage').value  = calcPlanData.garage || 0;
-            document.getElementById('calc-beds').value    = calcPlanData.beds   || 3;
-            document.getElementById('calc-baths').value   = calcPlanData.baths  || 2;
+            document.getElementById('calc-living').value = calcPlanData.area   || 0;
+            document.getElementById('calc-patio').value  = calcPlanData.patio  || 0;
+            document.getElementById('calc-garage').value = calcPlanData.garage || 0;
             if(calcPlanData.garageType){
               document.getElementById('calc-garage-label').textContent = calcPlanData.garageType + ' SF';
             }
           } else {
-            document.getElementById('calc-living').value = 2000;
-            document.getElementById('calc-patio').value  = 200;
-            document.getElementById('calc-garage').value = 800;
-            document.getElementById('calc-beds').value   = 3;
-            document.getElementById('calc-baths').value  = 2;
+            document.getElementById('calc-living').value = 3020;
+            document.getElementById('calc-patio').value  = 917;
+            document.getElementById('calc-garage').value = 992;
           }
-
-          calcSetTier('standard');
+          calcDefaultSF = (parseFloat(document.getElementById('calc-living').value)||0)
+                        + (parseFloat(document.getElementById('calc-garage').value)||0);
           calcUpdate();
         })();
 
@@ -1540,46 +1505,50 @@ first.parentNode.insertBefore(script, first);
         }
 
         function calcCompute(){
-          var living  = parseFloat(document.getElementById('calc-living').value)  || 0;
-          var patio   = parseFloat(document.getElementById('calc-patio').value)   || 0;
-          var garage  = parseFloat(document.getElementById('calc-garage').value)  || 0;
-          var beds    = parseFloat(document.getElementById('calc-beds').value)    || 0;
-          var baths   = parseFloat(document.getElementById('calc-baths').value)   || 0;
-          var fndKey  = document.getElementById('calc-foundation').value;
-          var locId   = document.getElementById('calc-location').value;
-          var sustain = parseFloat(document.getElementById('calc-sustain').value) || 5;
+          var living = parseFloat(document.getElementById('calc-living').value) || 0;
+          var patio  = parseFloat(document.getElementById('calc-patio').value)  || 0;
+          var garage = parseFloat(document.getElementById('calc-garage').value) || 0;
+          var fndKey = document.getElementById('calc-foundation').value;
+          var locId  = document.getElementById('calc-location').value;
           var gradeEl = document.querySelector('input[name="calc-grade"]:checked');
-          var grade   = gradeEl ? parseFloat(gradeEl.value) : 1.0;
-          var f = CALC_FACTORS[calcTier];
-          var base = (beds*f.bedroom) + (baths*f.bathroom) + (living*f.living) + (garage*f.garage) + (patio*f.patio);
-          base *= CALC_FOUNDATION[fndKey] || 1.0;
-          base *= grade;
-          var sustainBonus = Math.max(0, (sustain - 5) * 0.02);
-          base *= (1 + sustainBonus);
-          var city = CALC_CITIES.find(function(c){return c.id===locId;});
-          base *= city ? city.m : 1.0;
-          var gradeLabel = gradeEl ? gradeEl.closest('label').querySelector('strong').textContent : 'Flat';
-          return {owner: base, gc: base*(1+CALC_MARKUP), living:living, patio:patio, garage:garage, beds:beds, baths:baths, f:f, city:city, sustain:sustain, grade:grade, gradeLabel:gradeLabel};
+          var gradeKey = gradeEl ? gradeEl.value : 'flat';
+
+          var enclosed = living + garage;
+
+          // Steel weight: real Blueprint takeoff when available and SF unchanged, else calibrated estimate
+          var weight, weightSrc;
+          if(KIT_WEIGHTS[CALC_HANDLE] && enclosed === calcDefaultSF){
+            weight = KIT_WEIGHTS[CALC_HANDLE];
+            weightSrc = 'engineered takeoff (Blueprint)';
+          } else {
+            weight = enclosed * LBS_ENCLOSED_SF + patio * LBS_PORCH_SF;
+            weightSrc = 'calibrated takeoff estimate';
+          }
+
+          var kit = weight * KIT_RATE_PER_LB;
+
+          var city = CALC_CITIES.find(function(c){return c.id===locId;}) || CALC_CITIES[0];
+          var loads = Math.max(1, Math.ceil(weight / LBS_PER_LOAD));
+          var freight = loads * Math.max(FREIGHT_MIN_LOAD, city.mi * FREIGHT_PER_MILE);
+
+          var site = (enclosed * FND_BASE_SF + patio * FND_PORCH_SF)
+                   * (GRADE_FACTORS[gradeKey]||1.0) * (FND_FACTORS[fndKey]||1.0);
+
+          return {
+            living:living, patio:patio, garage:garage, enclosed:enclosed,
+            weight:Math.round(weight), weightSrc:weightSrc,
+            kit:kit, freight:freight, loads:loads, city:city,
+            site:site, total: kit + freight + site,
+            gradeKey:gradeKey, gradeLabel:GRADE_LABELS[gradeKey],
+            fndKey:fndKey, fndLabel:FND_LABELS[fndKey]
+          };
         }
 
         function calcUpdate(){
           var r = calcCompute();
-          document.getElementById('calc-preview-owner').textContent   = calcFmt(r.owner);
-          document.getElementById('calc-preview-gc').textContent      = calcFmt(r.gc);
-          document.getElementById('calc-preview-savings').textContent = calcFmt(r.gc - r.owner);
-        }
-
-        function calcSetTier(t){
-          calcTier = t;
-          ['economy','standard','luxury'].forEach(function(x){
-            var btn = document.getElementById('calc-tier-'+x);
-            if(x===t){
-              btn.style.background='#B8860B'; btn.style.borderColor='#B8860B'; btn.style.color='#fff';
-            } else {
-              btn.style.background='#252525'; btn.style.borderColor='#444'; btn.style.color='#ccc';
-            }
-          });
-          calcUpdate();
+          document.getElementById('calc-preview-kit').textContent = calcFmt(r.kit);
+          document.getElementById('calc-preview-lbs').textContent =
+            r.weight.toLocaleString('en-US') + ' lbs engineered steel @ $' + KIT_RATE_PER_LB + '/lb';
         }
 
         function openCalcModal(){
@@ -1624,20 +1593,6 @@ first.parentNode.insertBefore(script, first);
           btn.textContent = 'Sending...'; btn.disabled = true;
 
           var r = calcCompute();
-          var city = CALC_CITIES.find(function(c){return c.id===document.getElementById('calc-location').value;});
-
-          // Compute all 3 tiers for full payload match (same as Barnhaus website)
-          var savedTier = calcTier;
-          calcTier = 'economy'; var re = calcCompute();
-          calcTier = 'standard'; var rs = calcCompute();
-          calcTier = 'luxury'; var rl = calcCompute();
-          calcTier = savedTier;
-
-          var fndVal = document.getElementById('calc-foundation').value;
-          var locVal = document.getElementById('calc-location').value;
-          var sustainVal = parseFloat(document.getElementById('calc-sustain').value) || 5;
-          var gradeEl = document.querySelector('input[name="calc-grade"]:checked');
-          var gradeLabel = gradeEl ? gradeEl.closest('label').querySelector('strong').textContent : 'Flat';
           var totalSqft = r.living + r.patio + r.garage;
 
           var payload = {
@@ -1645,48 +1600,32 @@ first.parentNode.insertBefore(script, first);
             name: name, email: email, phone: phone,
             message: msg, project_stage: stage,
             // Dimensions
-            bedrooms: r.beds, bathrooms: r.baths,
             living_space: r.living, patio_space: r.patio, garage_space: r.garage,
             total_square_footage: totalSqft,
-            // Location
-            location: locVal,
-            location_name: city ? city.name : '',
-            location_multiplier: city ? city.m : 1.0,
-            // Build options
-            foundation_type: fndVal,
-            roof_pitch: 'standard',
-            interior_finish: calcTier,
-            selected_tier: calcTier,
-            sustainability_score: sustainVal,
-            property_grade: gradeEl ? gradeEl.value : '1.0',
-            property_grade_label: gradeLabel,
-            // Economy costs
-            economy_owner_cost: Math.round(re.owner),
-            economy_contractor_cost: Math.round(re.gc),
-            economy_savings: Math.round(re.gc - re.owner),
-            economy_savings_percent: Math.round((1 - re.owner/re.gc)*100),
-            // Standard costs
-            standard_owner_cost: Math.round(rs.owner),
-            standard_contractor_cost: Math.round(rs.gc),
-            standard_savings: Math.round(rs.gc - rs.owner),
-            standard_savings_percent: Math.round((1 - rs.owner/rs.gc)*100),
-            // Luxury costs
-            luxury_owner_cost: Math.round(rl.owner),
-            luxury_contractor_cost: Math.round(rl.gc),
-            luxury_savings: Math.round(rl.gc - rl.owner),
-            luxury_savings_percent: Math.round((1 - rl.owner/rl.gc)*100),
-            // Cost per sqft
-            cost_per_sqft_economy: totalSqft > 0 ? Math.round(re.owner/totalSqft) : 0,
-            cost_per_sqft_standard: totalSqft > 0 ? Math.round(rs.owner/totalSqft) : 0,
-            cost_per_sqft_luxury: totalSqft > 0 ? Math.round(rl.owner/totalSqft) : 0,
+            // Kit quote (Blueprint kit_package formula)
+            kit_weight_lbs: r.weight,
+            kit_weight_source: r.weightSrc,
+            kit_rate_per_lb: KIT_RATE_PER_LB,
+            kit_price: Math.round(r.kit),
+            freight_estimate: Math.round(r.freight),
+            freight_loads: r.loads,
+            site_allowance: Math.round(r.site),
+            total_estimate: Math.round(r.total),
+            // Site factors
+            location: r.city.id,
+            location_name: r.city.name,
+            delivery_miles: r.city.mi,
+            property_grade: r.gradeKey,
+            property_grade_label: r.gradeLabel,
+            foundation_type: r.fndKey,
             // Summary
-            project_summary: r.beds+'BR/'+r.baths+'BA • '+totalSqft+' sq ft • '+(city ? city.name : ''),
+            project_summary: 'STEEL KIT • ' + totalSqft + ' sq ft • ' + r.weight.toLocaleString('en-US') + ' lbs • ' + r.city.name,
             // Shopify-specific
-            plan_handle: "the-bastion",
-            plan_title: "The Bastion | Modern Ranch Plan",
+            plan_handle: CALC_HANDLE,
+            plan_title: CALC_TITLE,
             // Meta / tracking
-            form_type: 'Cost Calculator - Complete Data',
-            source: 'shopify_cost_calc',
+            form_type: 'Kit Cost Calculator',
+            source: 'shopify_kit_calc',
             page_url: window.location.href,
             timestamp: new Date().toISOString(),
             anonymous_id: window.CRMTracking?.getVisitorId() || '',
@@ -1702,25 +1641,30 @@ first.parentNode.insertBefore(script, first);
             headers:{'Content-Type':'application/json'},
             body: JSON.stringify(payload)
           }).catch(function(){}).finally(function(){
-            // Show results regardless
             document.getElementById('calc-step-form').style.display   = 'none';
             document.getElementById('calc-step-results').style.display = 'block';
-            document.getElementById('calc-results-thanks').textContent = '✅ Thank you, '+name+'! Here are your estimates:';
-            document.getElementById('res-owner').textContent    = calcFmt(r.owner);
-            document.getElementById('res-gc').textContent       = calcFmt(r.gc);
-            document.getElementById('res-savings').textContent  = calcFmt(r.gc - r.owner);
-            document.getElementById('res-savings-pct').textContent = Math.round((1-r.owner/r.gc)*100)+'% savings with owner-builder approach';
+            document.getElementById('calc-results-thanks').textContent = '✅ Thank you, '+name+'! Here is your kit quote:';
+
+            document.getElementById('res-kit').textContent = calcFmt(r.kit);
+            document.getElementById('res-kit-sub').textContent =
+              r.weight.toLocaleString('en-US')+' lbs @ $'+KIT_RATE_PER_LB+'/lb — '+r.weightSrc;
+            document.getElementById('res-freight').textContent = calcFmt(r.freight);
+            document.getElementById('res-freight-sub').textContent =
+              r.loads+' flatbed load'+(r.loads>1?'s':'')+' · ~'+r.city.mi+' mi to '+r.city.name;
+            document.getElementById('res-site').textContent = calcFmt(r.site);
+            document.getElementById('res-site-sub').textContent =
+              r.gradeLabel+' lot · '+r.fndLabel;
+            document.getElementById('res-total').textContent = calcFmt(r.total);
 
             var bd = document.getElementById('res-breakdown');
             bd.innerHTML = '';
             var rows = [
-              ['Living Space ('+r.living+' SF)', calcFmt(r.living * r.f.living)],
-              ['Bedrooms ('+r.beds+')', calcFmt(r.beds * r.f.bedroom)],
-              ['Bathrooms ('+r.baths+')', calcFmt(r.baths * r.f.bathroom)]
+              ['Enclosed area ('+r.enclosed+' SF × '+LBS_ENCLOSED_SF+' lbs/SF)', Math.round(r.enclosed*LBS_ENCLOSED_SF).toLocaleString('en-US')+' lbs'],
+              ['Porch/patio roof ('+r.patio+' SF × '+LBS_PORCH_SF+' lbs/SF)', Math.round(r.patio*LBS_PORCH_SF).toLocaleString('en-US')+' lbs'],
+              ['Kit package ('+r.weight.toLocaleString('en-US')+' lbs @ $'+KIT_RATE_PER_LB+'/lb)', calcFmt(r.kit)],
+              ['Freight — '+r.city.name+' ('+r.loads+' load'+(r.loads>1?'s':'')+')', calcFmt(r.freight)],
+              ['Foundation & site allowance — '+r.gradeLabel+', '+r.fndLabel, calcFmt(r.site)]
             ];
-            if(r.garage>0) rows.push(['Garage/Shop ('+r.garage+' SF)', calcFmt(r.garage * r.f.garage)]);
-            if(r.patio>0)  rows.push(['Patio ('+r.patio+' SF)', calcFmt(r.patio * r.f.patio)]);
-            if(city && city.m!==1.0) rows.push(['Location ('+city.name+')', ((city.m-1)*100).toFixed(0)+'%']);
             rows.forEach(function(row){
               bd.innerHTML += '<div style="display:flex;justify-content:space-between;color:#ccc;padding:4px 0;border-bottom:1px solid #2a2a2a;">'
                 +'<span>'+row[0]+'</span><span style="color:#fff;font-weight:600;">'+row[1]+'</span></div>';
