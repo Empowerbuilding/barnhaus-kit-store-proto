@@ -1034,7 +1034,7 @@ first.parentNode.insertBefore(script, first);
           </div>
           <div class="featured-project-info">
             <h3>Spring Mountain Estate</h3>
-            <p class="project-location">📍 Hill Country, Texas</p>
+            <p class="project-location">Hill Country, Texas</p>
             <p class="project-description">A stunning 4,500 sq ft custom home featuring modern industrial design with panoramic hill country views.</p>
           </div>
         </div>
@@ -1071,7 +1071,7 @@ first.parentNode.insertBefore(script, first);
     <div class="page-width">
       <div class="studio-cta-container">
         <div class="studio-cta-content">
-          <div class="studio-badge">✨ Custom Steel Kits</div>
+          <div class="studio-badge">Custom Steel Kits</div>
           <h2 class="studio-title">Interested in a Steel Kit?</h2>
           <p class="studio-subtitle">Every Barnhaus design can now be delivered as a complete engineered CFS kit — wall panels, trusses, hardware, and PE-stamped engineering, with slab-fit verified before fabrication. Quotes in 2 business days.</p>
           
@@ -3185,19 +3185,19 @@ function extractSpecs(product) {
   // Try to extract dimensions from title
   const sizeMatch = title.match(/(\d+)\s*x\s*(\d+)/);
   if (sizeMatch) {
-    specs.push(`<span>📐 ${sizeMatch[1]}' x ${sizeMatch[2]}'</span>`);
+    specs.push(`<span>${sizeMatch[1]}' x ${sizeMatch[2]}'</span>`);
   }
   
   // Try to extract bedrooms
   const bedMatch = title.match(/(\d+)\s*bed/i);
   if (bedMatch) {
-    specs.push(`<span>🛏️ ${bedMatch[1]} Bed</span>`);
+    specs.push(`<span>${bedMatch[1]} Bed</span>`);
   }
   
   // Try to extract bathrooms
   const bathMatch = title.match(/(\d+(?:\.\d+)?)\s*bath/i);
   if (bathMatch) {
-    specs.push(`<span>🚿 ${bathMatch[1]} Bath</span>`);
+    specs.push(`<span>${bathMatch[1]} Bath</span>`);
   }
   
   return specs.join('');
@@ -3409,6 +3409,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <ul class="footer-links">
             <li><a href="index.html" class="footer-link">Home</a></li>
             <li><a href="catalog.html" class="footer-link">Catalog</a></li>
+            <li><a href="steel-kits.html" class="footer-link">Steel Kits</a></li>
             <li><a href="https://store.barnhaussteelbuilders.com/pages/faq" class="footer-link">FAQ</a></li>
             <li><a href="https://store.barnhaussteelbuilders.com/pages/contact" class="footer-link">Contact</a></li>
           </ul>
