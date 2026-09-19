@@ -439,7 +439,7 @@ first.parentNode.insertBefore(script, first);
 .kitcta{text-align:center;margin:44px 0 10px}
 @media(max-width:900px){.kitsteps{grid-template-columns:1fr}.kitpage-hero h1{font-size:1.9rem}}
 </style>
-<style>/* mask page content scrolling behind the floating nav band */body::before{content:"";position:fixed;top:0;left:0;right:0;height:var(--navmask,93px);background:#1C1C1C;z-index:999;pointer-events:none}</style>
+<style>/* mask page content scrolling behind the floating nav band */body::before{content:"";position:fixed;top:0;left:0;right:0;height:calc(var(--navmask,93px) + 30px);background:linear-gradient(to bottom,#1C1C1C calc(100% - 30px),rgba(28,28,28,0) 100%);z-index:999;pointer-events:none}</style>
 </head>
 
 <body class="template-page">
